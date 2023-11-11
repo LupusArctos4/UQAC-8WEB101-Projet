@@ -9,10 +9,12 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Test"/>
     </div>
   </header>
 
   <main>
+    <p>Test</p>
     <TheWelcome />
   </main>
 </template>
