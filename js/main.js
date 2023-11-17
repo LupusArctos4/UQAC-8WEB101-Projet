@@ -21,8 +21,6 @@ boutonJouer.addEventListener("click", function () {
     {
         //On enregistre le nombre de joueurs dans le stockage local et on lance la partie
         localStorage.setItem("nbJoueurs", nbJoueurs);
-        /*
-         *todo : Rediriger vers la page de partie
-         */
+        window.location.href = "jeu.html";
     }
 })
