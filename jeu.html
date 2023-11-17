@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Partie</title>
-    <link href="css/jeu.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>DuneJS</title>
+        <link href="css/jeu.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!-- Conteneur global -->
+        <div class="wrapper">
+            <!-- Colonne gauche (joueurs 1 et 3) -->
+            <div class="conteneur_lateral" id="conteneur_gauche">
+                <!-- Zone joueur 1 -->
+                <div class="conteneur_joueur" id="conteneur_J1">
+
+                </div>
+
+                <!-- Zone joueur 3 -->
+                <div class="conteneur_joueur" id="conteneur_J3">
+
+                </div>
+            </div>
+
+            <!-- Conteneur global du plateau-->
+            <div class="conteneur_plateau">
+                <!-- Arrière plan du plateau-->
+                <img src="img/plateau.jpg" alt="Plateau de jeu" id="plateau">
+            </div>
+
+            <!-- Colonne gauche (joueurs 1 et 3) -->
+            <div class="conteneur_lateral" id="conteneur_droit">
+                <!-- Zone joueur 2 -->
+                <div class="conteneur_joueur" id="conteneur_J2">
+
+                </div>
+                <!-- Zone joueur 4 -->
+                <div class="conteneur_joueur" id="conteneur_J4">
+
+                </div>
+            </div>
+        </div>
+    </body>
 
     <script src="js/jeu.js"></script>
-</body>
 </html>

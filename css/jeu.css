@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Pour éviter la barre de défilement horizontale */
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.conteneur_plateau {
+    width: 50%;
+    height: auto;
+    background-color: orange;
+    margin: 0;
+}
+
+#plateau {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.conteneur_lateral {
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+    margin: 0;
+}
+
+.conteneur_joueur {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+}
+
+#conteneur_J1 {
+    background-color: red;
+}
+
+#conteneur_J2 {
+    background-color: yellow;
+}
+
+#conteneur_J3 {
+    background-color: green;
+}
+
+#conteneur_J4 {
+    background-color: blue;
+}
