@@ -58,3 +58,123 @@ body {
 #conteneur_J4 {
     background-color: blue;
 }
+
+.reserve_deck_trash {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 33%;
+    height: 19%;
+    top: 6.5%;
+    left: 39.8%;
+}
+
+.imperium_row {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 33%;
+    height: 19%;
+    top: 27%;
+    left: 39.8%;
+}
+
+.intrigue {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 8.5%;
+    height: 13%;
+    top: 50%;
+    left: 64.3%;
+}
+
+.conflict {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 8.5%;
+    height: 12.3%;
+    top: 121.5%;
+    left: 28%;
+}
+
+.victory_points {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 2.5%;
+    height: 85.3%;
+    top: 68%;
+    left: 70.2%;
+}
+
+.contracts_column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 5.9%;
+    height: 16.8%;
+    top: 50%;
+    left: 57%;
+}
+
+.tech_column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 6.4%;
+    height: 26.4%;
+    top: 68.3%;
+    left: 60%;
+}
+
+.case_row {
+    width: 20%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.intrigue_row {
+    width: 50%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.victory_point {
+    width: 100%;
+    height: 6.25%;
+    opacity: 50%;
+}
+
+.contract {
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.tech {
+    width: 100%;
+    height: 33.3333%;
+    opacity: 50%;
+}
+
+.case_row:hover {
+    background-color: green;
+}
+
+.intrigue_row:hover {
+    background-color: green;
+}
+
+.victory_point:hover {
+    background-color: green;
+}
+
+.contract:hover {
+    background-color: green;
+}
+
+.tech:hover {
+    background-color: green;
+}
