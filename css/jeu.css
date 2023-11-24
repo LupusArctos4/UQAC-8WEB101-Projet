@@ -16,6 +16,7 @@ body {
 
 .conteneur_plateau {
     width: 50%;
+    position: relative;
     height: auto;
     background-color: orange;
     margin: 0;
@@ -59,54 +60,59 @@ body {
     background-color: blue;
 }
 
+/*Redimenssionné V*/
 .reserve_deck_trash {
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 33%;
-    height: 19%;
-    top: 6.5%;
-    left: 39.8%;
+    width: 66.2%;
+    height: 12.2%;
+    top: 4%;
+    left: 29.5%;
 }
 
+/*Redimenssionné V*/
 .imperium_row {
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 33%;
-    height: 19%;
-    top: 27%;
-    left: 39.8%;
+    width: 66.2%;
+    height: 12.2%;
+    top: 17.2%;
+    left: 29.5%;
 }
 
+/*Redimenssionné V*/
 .intrigue {
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 8.5%;
-    height: 13%;
-    top: 50%;
-    left: 64.3%;
+    width: 17%;
+    height: 8.3%;
+    top: 32%;
+    left: 78.5%;
 }
 
+/*Redimenssionné V*/
 .conflict {
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 8.5%;
-    height: 12.3%;
-    top: 121.5%;
-    left: 28%;
+    width: 17.3%;
+    height: 8%;
+    top: 77.35%;
+    left: 5.7%;
 }
 
+/*Redimenssionné V*/
 .victory_points {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 2.5%;
-    height: 85.3%;
-    top: 68%;
-    left: 70.2%;
+    width: 5.1%;
+    height: 54.5%;
+    top: 43.3%;
+    left: 90.5%;
 }
 
 .contracts_column {

@@ -1,17 +1,18 @@
 class GenPointsAncrage {
-    largeurPlateau;
+    hauteurPage;
     hauteurPlateau;
     constructor() {
-        let largeurPlateau = window.document.getElementById("plateau").width;
-        let hauteurPlateau = window.document.getElementById("plateau").height;
+        let hauteurPage = window.document.body.offsetHeight;
+        let hauteurPlateau = window.document.getElementById("plateau").offsetHeight;
 
-        this.largeurPlateau = largeurPlateau;
+        this.hauteurPage = hauteurPage;
         this.hauteurPlateau = hauteurPlateau;
+
     }
 
     display()
     {
-        console.log("Largeur du plateau : " + this.largeurPlateau);
+        console.log("Hauteur de la page : " + this.hauteurPage);
         console.log("Hauteur du plateau : " + this.hauteurPlateau);
     }
 }
