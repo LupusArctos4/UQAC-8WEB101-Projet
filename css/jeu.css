@@ -115,6 +115,46 @@ body {
     left: 90.5%;
 }
 
+.ressources {
+    display: flex;
+    position: absolute;
+    width: 21.8%;
+    height: 11.55%;
+    top: 79.9%;
+    left: 66.2%;
+    opacity: 50%;
+}
+
+.guerre_gauche {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 11.4%;
+    height: 15.3%;
+    top: 76.2%;
+    left: 25.75%;
+}
+
+.guerre_droite {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 11.4%;
+    height: 15.3%;
+    top: 76.2%;
+    left: 53.2%;
+}
+
+.wrapper_combat {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 43.8%;
+    height: 5.9%;
+    top: 91.8%;
+    left: 24.2%;
+}
+
 .contracts_column {
     display: flex;
     flex-direction: column;
@@ -133,6 +173,59 @@ body {
     height: 26.4%;
     top: 68.3%;
     left: 60%;
+}
+
+.column_influence_bene_geserit {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.4%;
+    top: 14.95%;
+    left: 5.95%;
+}
+
+.column_influence_the_emperor {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.3%;
+    top: 30.4%;
+    left: 5.75%;
+}
+
+.column_influence_spacing_guild {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.3%;
+    top: 45.8%;
+    left: 5.75%;
+}
+
+.column_influence_fremen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.3%;
+    top: 61.22%;
+    left: 5.75%;
+}
+
+.cases_combat {
+    width: 90.909%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.case_col_influ {
+    width: 100%;
+    height: 14.2857%;
+    opacity: 50%;
 }
 
 .case_row {
@@ -165,6 +258,24 @@ body {
     opacity: 50%;
 }
 
+.garnisson {
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.div_epees {
+    width: 9.0909%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.combat {
+    width: 10%;
+    height: 50%;
+    opacity: 50%;
+}
+
 .case_row:hover {
     background-color: green;
 }
@@ -182,5 +293,25 @@ body {
 }
 
 .tech:hover {
+    background-color: green;
+}
+
+.ressources:hover {
+    background-color: green;
+}
+
+.garnisson:hover {
+    background-color: green;
+}
+
+.div_epees:hover {
+    background-color: green;
+}
+
+.combat:hover {
+    background-color: green;
+}
+
+.case_col_influ:hover {
     background-color: green;
 }
