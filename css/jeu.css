@@ -455,6 +455,8 @@ body {
 .case_col_influ {
     width: 100%;
     height: 14.2857%;
+    display: flex;
+    flex-direction: row;
     opacity: 50%;
 }
 
