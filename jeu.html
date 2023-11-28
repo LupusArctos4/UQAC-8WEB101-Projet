@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <title>DuneJS</title>
         <link href="css/jeu.css" rel="stylesheet" type="text/css">
-        <script src="js/GenPointsAncrage.js"></script>
+        <script src="js/InitialisationPartie.js"></script>
     </head>
     <body>
         <!-- Conteneur global -->
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <!-- Colonne gauche (joueurs 1 et 3) -->
             <div class="conteneur_lateral" id="conteneur_gauche">
                 <!-- Zone joueur 1 -->
@@ -25,8 +25,8 @@
             <!-- Conteneur global du plateau-->
             <!-- ID DES CASES : -->
             <!-- ============== -->
-            <!-- Reserve row : reserve_1 | reserve_2 -->
-            <!-- Imperium deck : imperium_deck_1 | imperium_deck_2 -->
+            <!-- Reserve row : reserve -->
+            <!-- Imperium deck : imperium_deck_0 | imperium_deck_1 | imperium_deck_2 -->
             <!-- Trash : trash -->
             <!-- Imperium row : imperium_row_1 | imperium_row_2 | imperium_row_3 | imperium_row_4 | imperium_row_5 -->
             <!-- Intrigue : intrigue_1 | intrigue_2 -->
@@ -35,16 +35,53 @@
                                   victory_point_4 | victory_point_5 | victory_point_6 | victory_point_7
                                   victory_point_8 | victory_point_9 | victory_point_10| victory_point_11
                                   victory_point_12| victory_point_13| victory_point_14| victory_point_15 -->
-            <!-- Contracts : contract_1 | contract_2 -->
-            <!-- Tech : tech_1 | tech_2 | tech_3 -->
+            <!-- PROCHAINEMENT Contracts : contract_1 | contract_2 -->
+            <!-- PROCHAINEMENT Tech : tech_1 | tech_2 | tech_3 -->
+            <!-- Garnisson : garnisson_1 | garnisson_2 | garnisson_3 | garnisson_4 -->
+            <!-- Cases combat : combat_1 | combat_2 | combat_3 | combat_4 | combat_5
+                                combat_6 | combat_7 | combat_8 | combat_9 | combat_10
+                                combat_11| combat_12| combat_13| combat_14| combat_15
+                                combat_16| combat_17| combat_18| combat_19| combat_20 -->
+            <!-- Colonne influence geserit : column_influence_bene_geserit_1 | column_influence_bene_geserit_2
+                                             column_influence_bene_geserit_3 | column_influence_bene_geserit_4
+                                             column_influence_bene_geserit_5 | column_influence_bene_geserit_6
+                                             column_influence_bene_geserit_7 -->
+
+            <!-- Colonne influence the emperor : column_influence_the_emperor_1 | column_influence_the_emperor_2
+                                                 column_influence_the_emperor_3 | column_influence_the_emperor_4
+                                                 column_influence_the_emperor_5 | column_influence_the_emperor_6
+                                                 column_influence_the_emperor_7 -->
+
+            <!-- Colonne influence spacing guild : column_influence_spacing_guild_1 | column_influence_spacing_guild_2
+                                                   column_influence_spacing_guild_3 | column_influence_spacing_guild_4
+                                                   column_influence_spacing_guild_5 | column_influence_spacing_guild_6
+                                                   column_influence_spacing_guild_7 -->
+
+            <!-- Colonne influence fremen : column_influence_fremen_1 | column_influence_fremen_2
+                                            column_influence_fremen_3 | column_influence_fremen_4
+                                            column_influence_fremen_5 | column_influence_fremen_6
+                                            column_influence_fremen_7 -->
+
+            <!-- Influence bene geserit : influence_bene_geserit_1 | influence_bene_geserit_2 -->
+            <!-- Influence the emperor : influence_the_emperor_1 | influence_the_emperor_2 -->
+            <!-- Influence spacing guild : influence_spacing_guild_1 | influence_spacing_guild_2 -->
+            <!-- Influence fremen : influence_fremen_1 | influence_fremen_2 -->
+            <!-- Choam : choam_1 | choam_2 -->
+            <!-- Landsrand : landsrand_1 | landsrand_2 | landsrand_3 -->
+            <!-- Conseil : conseil_1 | conseil_2 | conseil_3 | conseil_4 -->
+            <!-- Pion : pion_3 -->
+            <!-- Epices : epice_1 | epice_2 | epice_3 -->
+            <!-- Epices bonus : epice_bonus_1 | epice_bonus_2 | epice_bonus_3 -->
+            <!-- Eau : eau_1 | eau_2 | eau_3 | eau_4 -->
+            <!-- Marqueur : marqueur_1 | marqueur_2 | marqueur_3 -->
 
             <!-- TODO : Gérer le % de la hauteur par rapport à celle du plateau -->
             <div class="conteneur_plateau">
                 <!-- Arrière plan du plateau-->
-                <img src="img/plateau.jpg" alt="Plateau de jeu" id="plateau">
-                <div class="reserve_deck_trash">
-                    <div class="case_row" id="reserve_1"></div>
-                    <div class="case_row" id="reserve_2"></div>
+                <img src="img/plateau_prochainement.jpg" alt="Plateau de jeu" id="plateau">
+                <div class="reserve_deck_trash" id="reserve_deck_trash">
+                    <div class="case_row" id="reserve"></div>
+                    <div class="case_row" id="imperium_deck_0"></div>
                     <div class="case_row" id="imperium_deck_1"></div>
                     <div class="case_row" id="imperium_deck_2"></div>
                     <div class="case_row" id="trash"></div>
@@ -87,7 +124,144 @@
                     <div class="victory_point" id="victory_point_0"></div>
                 </div>
 
-                <div class="contracts_column">
+                <div class="ressources"></div>
+
+                <div class="guerre_gauche">
+                    <div class="garnisson" id="garnisson_1"></div>
+                    <div class="garnisson" id="garnisson_2"></div>
+                </div>
+
+                <div class="guerre_droite">
+                    <div class="garnisson" id="garnisson_3"></div>
+                    <div class="garnisson" id="garnisson_4"></div>
+                </div>
+
+                <div class="wrapper_combat">
+                    <div class="div_epees" id="div_epees"></div>
+                    <div class="cases_combat">
+                        <div class="combat" id="combat_1"></div>
+                        <div class="combat" id="combat_2"></div>
+                        <div class="combat" id="combat_3"></div>
+                        <div class="combat" id="combat_4"></div>
+                        <div class="combat" id="combat_5"></div>
+                        <div class="combat" id="combat_6"></div>
+                        <div class="combat" id="combat_7"></div>
+                        <div class="combat" id="combat_8"></div>
+                        <div class="combat" id="combat_9"></div>
+                        <div class="combat" id="combat_10"></div>
+                        <div class="combat" id="combat_11"></div>
+                        <div class="combat" id="combat_12"></div>
+                        <div class="combat" id="combat_13"></div>
+                        <div class="combat" id="combat_14"></div>
+                        <div class="combat" id="combat_15"></div>
+                        <div class="combat" id="combat_16"></div>
+                        <div class="combat" id="combat_17"></div>
+                        <div class="combat" id="combat_18"></div>
+                        <div class="combat" id="combat_19"></div>
+                        <div class="combat" id="combat_20"></div>
+                    </div>
+                </div>
+
+                <div class="column_influence_bene_geserit">
+                    <div class="case_col_influ" id="column_influence_bene_geserit_7"></div>
+                    <div class="case_col_influ" id="column_influence_bene_geserit_6"></div>
+                    <div class="case_col_influ" id="column_influence_bene_geserit_5"></div>
+                    <div class="case_col_influ" id="column_influence_bene_geserit_4"></div>
+                    <div class="case_col_influ" id="column_influence_bene_geserit_3"></div>
+                    <div class="case_col_influ" id="column_influence_bene_geserit_2"></div>
+                    <div class="case_col_influ" id="column_influence_bene_geserit_1"></div>
+                </div>
+
+                <div class="column_influence_the_emperor">
+                    <div class="case_col_influ" id="column_influence_the_emperor_7"></div>
+                    <div class="case_col_influ" id="column_influence_the_emperor_6"></div>
+                    <div class="case_col_influ" id="column_influence_the_emperor_5"></div>
+                    <div class="case_col_influ" id="column_influence_the_emperor_4"></div>
+                    <div class="case_col_influ" id="column_influence_the_emperor_3"></div>
+                    <div class="case_col_influ" id="column_influence_the_emperor_2"></div>
+                    <div class="case_col_influ" id="column_influence_the_emperor_1"></div>
+                </div>
+
+                <div class="column_influence_spacing_guild">
+                    <div class="case_col_influ" id="column_influence_spacing_guild_7"></div>
+                    <div class="case_col_influ" id="column_influence_spacing_guild_6"></div>
+                    <div class="case_col_influ" id="column_influence_spacing_guild_5"></div>
+                    <div class="case_col_influ" id="column_influence_spacing_guild_4"></div>
+                    <div class="case_col_influ" id="column_influence_spacing_guild_3"></div>
+                    <div class="case_col_influ" id="column_influence_spacing_guild_2"></div>
+                    <div class="case_col_influ" id="column_influence_spacing_guild_1"></div>
+                </div>
+
+                <div class="column_influence_fremen">
+                    <div class="case_col_influ" id="column_influence_fremen_7"></div>
+                    <div class="case_col_influ" id="column_influence_fremen_6"></div>
+                    <div class="case_col_influ" id="column_influence_fremen_5"></div>
+                    <div class="case_col_influ" id="column_influence_fremen_4"></div>
+                    <div class="case_col_influ" id="column_influence_fremen_3"></div>
+                    <div class="case_col_influ" id="column_influence_fremen_2"></div>
+                    <div class="case_col_influ" id="column_influence_fremen_1"></div>
+                </div>
+
+                <!-- Pas la div d'une case influence, voir les sous cases dans la div -->
+                <div class="influence_bene_geserit">
+                    <div class="influence" id="influence_bene_geserit_1"></div>
+                    <div class="influence" id="influence_bene_geserit_2"></div>
+                </div>
+
+                <!-- Pas la div d'une case influence, voir les sous cases dans la div -->
+                <div class="influence_the_emperor">
+                    <div class="influence" id="influence_the_emperor_1"></div>
+                    <div class="influence" id="influence_the_emperor_2"></div>
+                </div>
+
+                <!-- Pas la div d'une case influence, voir les sous cases dans la div -->
+                <div class="influence_spacing_guild">
+                    <div class="influence" id="influence_spacing_guild_1"></div>
+                    <div class="influence" id="influence_spacing_guild_2"></div>
+                </div>
+
+                <!-- Pas la div d'une case influence, voir les sous cases dans la div -->
+                <div class="influence_fremen">
+                    <div class="influence" id="influence_fremen_1"></div>
+                    <div class="influence" id="influence_fremen_2"></div>
+                </div>
+
+                <div class="div_choam">
+                    <div class="choam" id="choam_1"></div>
+                    <div class="choam" id="choam_2"></div>
+                </div>
+
+                <div class="landsrand" id="landsrand_1"></div>
+                <div class="landsrand" id="landsrand_2"></div>
+                <div class="landsrand" id="landsrand_3"></div>
+
+                <div class="conseil_row">
+                    <div class="conseil" id="conseil_1"></div>
+                    <div class="conseil" id="conseil_2"></div>
+                    <div class="conseil" id="conseil_3"></div>
+                    <div class="conseil" id="conseil_4"></div>
+                </div>
+
+                <div class="pion" id="pion_3"></div>
+
+                <div class="epice_box" id="epice_1"></div>
+                <div class="epice_box" id="epice_2"></div>
+                <div class="epice_box" id="epice_3"></div>
+
+                <div class="epice_bonus_box" id="epice_bonus_1"></div>
+                <div class="epice_bonus_box" id="epice_bonus_2"></div>
+                <div class="epice_bonus_box" id="epice_bonus_3"></div>
+
+                <div class="box_eau" id="eau_1"></div>
+                <div class="box_eau" id="eau_2"></div>
+                <div class="box_eau" id="eau_3"></div>
+                <div class="box_eau" id="eau_4"></div>
+
+                <div class="box_marqueur" id="marqueur_1"></div>
+                <div class="box_marqueur" id="marqueur_2"></div>
+                <div class="box_marqueur" id="marqueur_3"></div>
+
+<!-- PROCHAINEMENT                <div class="contracts_column">
                     <div class="contract" id="contract_1"></div>
                     <div class="contract" id="contract_2"></div>
                 </div>
@@ -96,7 +270,7 @@
                     <div class="tech" id="tech_1"></div>
                     <div class="tech" id="tech_2"></div>
                     <div class="tech" id="tech_3"></div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Colonne gauche (joueurs 1 et 3) -->

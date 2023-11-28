@@ -1,66 +1,597 @@
 body {
     margin: 0;
-    display: flex;
+    padding: 0;
+    overflow-x: hidden; /* Pour éviter la barre de défilement horizontale */
 }
 
 .wrapper {
-    background: #3498db; /* Bleu */
-    height: 100vh;
     width: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    background-color: blue;
+    margin: 0;
+    overflow-y: auto;
 }
 
-#titre_boutons {
-    width: 600px;
-    height: 600px;
-    background: #2ecc71; /*vert*/
+.conteneur_plateau {
+    width: 50%;
+    position: relative;
+    height: auto;
+    background-color: orange;
+    margin: 0;
+}
+
+#plateau {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.conteneur_lateral {
+    width: 25%;
+    height: auto;
     display: flex;
     flex-direction: column;
-}
-
-.sous_div_titre_boutons {
-    width: 100%;
-    height: 25%;
-    background: #2ecc71; /* Vert */
-}
-
-h1 {
+    background-color: darkgrey;
     margin: 0;
+}
+
+.conteneur_joueur {
     width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 0;
+}
+
+#conteneur_J1 {
+    background-color: red;
+}
+
+#conteneur_J2 {
+    background-color: yellow;
+}
+
+#conteneur_J3 {
+    background-color: green;
+}
+
+#conteneur_J4 {
+    background-color: blue;
+}
+
+/*Redimenssionné V*/
+.reserve_deck_trash {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 66.2%;
+    height: 12.2%;
+    top: 4%;
+    left: 29.5%;
+}
+
+/*Redimenssionné V*/
+.imperium_row {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 66.2%;
+    height: 12.2%;
+    top: 17.2%;
+    left: 29.5%;
+}
+
+/*Redimenssionné V*/
+.intrigue {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 17%;
+    height: 8.3%;
+    top: 32%;
+    left: 78.5%;
+}
+
+/*Redimenssionné V*/
+.conflict {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 17.3%;
+    height: 8%;
+    top: 77.35%;
+    left: 5.7%;
+}
+
+/*Redimenssionné V*/
+.victory_points {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 5.1%;
+    height: 54.5%;
+    top: 43.3%;
+    left: 90.5%;
+}
+
+.ressources {
+    display: flex;
+    position: absolute;
+    width: 21.8%;
+    height: 11.55%;
+    top: 79.9%;
+    left: 66.2%;
+    opacity: 50%;
+}
+
+.guerre_gauche {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 11.4%;
+    height: 15.3%;
+    top: 76.2%;
+    left: 25.75%;
+}
+
+.guerre_droite {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 11.4%;
+    height: 15.3%;
+    top: 76.2%;
+    left: 53.2%;
+}
+
+.wrapper_combat {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 43.8%;
+    height: 5.9%;
+    top: 91.8%;
+    left: 24.2%;
+}
+
+.contracts_column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 5.9%;
+    height: 16.8%;
+    top: 50%;
+    left: 57%;
+}
+
+.tech_column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 6.4%;
+    height: 26.4%;
+    top: 68.3%;
+    left: 60%;
+}
+
+.column_influence_bene_geserit {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.4%;
+    top: 14.95%;
+    left: 5.95%;
+}
+
+.column_influence_the_emperor {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.3%;
+    top: 30.4%;
+    left: 5.75%;
+}
+
+.column_influence_spacing_guild {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.3%;
+    top: 45.8%;
+    left: 5.75%;
+}
+
+.column_influence_fremen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 8.5%;
+    height: 14.3%;
+    top: 61.22%;
+    left: 5.75%;
+}
+
+.influence_bene_geserit {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 12.2%;
+    height: 11.1%;
+    top: 17.5%;
+    left: 15.6%;
+}
+
+.influence_the_emperor {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 12.2%;
+    height: 11.1%;
+    top: 33%;
+    left: 15.6%;
+}
+
+.influence_spacing_guild {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 12.2%;
+    height: 11.1%;
+    top: 48.5%;
+    left: 15.6%;
+}
+
+.influence_fremen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 12.2%;
+    height: 11.1%;
+    top: 63.85%;
+    left: 15.6%;
+}
+
+.div_choam {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 12.1%;
+    height: 10.8%;
+    top: 48.5%;
+    left: 30.5%;
+}
+
+.conseil_row {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 14%;
+    height: 2.5%;
+    top: 33.7%;
+    left: 40.7%;
+}
+
+.pion {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 3.6%;
+    height: 4%;
+    top: 39.63%;
+    left: 56%;
+    opacity: 50%;
+}
+
+.landsrand {
+    display: flex;
+    position: absolute;
+}
+
+#landsrand_1 {
+    width: 7.4%;
+    height: 4.1%;
+    top: 33.5%;
+    left: 31.2%;
+    opacity: 50%;
+}
+
+#landsrand_2 {
+    width: 7.4%;
+    height: 4%;
+    top: 39.6%;
+    left: 31.2%;
+    opacity: 50%;
+}
+
+#landsrand_3 {
+    width: 7.4%;
+    height: 4%;
+    top: 39.63%;
+    left: 48.2%;
+    opacity: 50%;
+}
+
+.epice_box {
+    display: flex;
+    position: absolute;
+}
+
+#epice_1 {
+    width: 7.3%;
+    height: 4.15%;
+    top: 62.5%;
+    left: 30.3%;
+    opacity: 50%;
+}
+
+#epice_2 {
+    width: 7.3%;
+    height: 4.15%;
+    top: 62.5%;
+    left: 48.8%;
+    opacity: 50%;
+}
+
+#epice_3 {
+    width: 7.3%;
+    height: 4.15%;
+    top: 62.5%;
+    left: 68.8%;
+    opacity: 50%;
+}
+
+.epice_bonus_box {
+    display: flex;
+    position: absolute;
+}
+
+#epice_bonus_1 {
+    width: 3.2%;
+    height: 2.05%;
+    top: 64.75%;
+    left: 40.5%;
+    opacity: 50%;
+}
+
+#epice_bonus_2 {
+    width: 3.2%;
+    height: 2.05%;
+    top: 64.75%;
+    left: 59%;
+    opacity: 50%;
+}
+
+#epice_bonus_3 {
+    width: 3.2%;
+    height: 2.05%;
+    top: 64.75%;
+    left: 76.5%;
+    opacity: 50%;
+}
+
+.box_eau {
+    display: flex;
+    position: absolute;
+}
+
+#eau_1 {
+    width: 7.3%;
+    height: 4.1%;
+    top: 70.35%;
+    left: 30.45%;
+    opacity: 50%;
+}
+
+#eau_2 {
+    width: 7.3%;
+    height: 4.1%;
+    top: 70.35%;
+    left: 49.3%;
+    opacity: 50%;
+}
+
+#eau_3 {
+    width: 7.3%;
+    height: 4.1%;
+    top: 70.35%;
+    left: 64.25%;
+    opacity: 50%;
+}
+
+#eau_4 {
+    width: 7.3%;
+    height: 4.1%;
+    top: 70.35%;
+    left: 77.6%;
+    opacity: 50%;
+}
+
+.box_marqueur {
+    display: flex;
+    position: absolute;
+}
+
+#marqueur_1 {
+    width: 3.7%;
+    height: 2.8%;
+    top: 66.5%;
+    left: 72.45%;
+    opacity: 50%;
+}
+
+#marqueur_2 {
+    width: 3.7%;
+    height: 2.8%;
+    top: 74.3%;
+    left: 67.8%;
+    opacity: 50%;
+}
+
+#marqueur_3 {
+    width: 3.7%;
+    height: 2.8%;
+    top: 74.3%;
+    left: 81.2%;
+    opacity: 50%;
+}
+
+.cases_combat {
+    width: 90.909%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Agency FB", sans-serif;
-    font-size: 4em;
-    color: black; /* black */
+    flex-wrap: wrap;
 }
 
-select {
-    margin: 0;
-    width: 100%;
+.conseil {
+    width: 25%;
     height: 100%;
-    display: flex;
-    text-align: center;
-    font-family: "Agency FB", sans-serif;
-    font-size: 1.5em;
-    color: darkkhaki; /* Gris foncé */
+    opacity: 50%;
 }
 
-button {
-    margin: 0;
+.case_col_influ {
     width: 100%;
-    height: 100%;
+    height: 14.2857%;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: "Agency FB", sans-serif;
-    font-size: 2.5em;
-    color: #ecf0f1; /* Gris clair */
-    background: #3498db; /* Bleu */
-    border: none;
-    cursor: pointer;
+    flex-direction: row;
+    opacity: 50%;
+}
+
+.case_row {
+    width: 20%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.intrigue_row {
+    width: 50%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.victory_point {
+    width: 100%;
+    height: 6.25%;
+    opacity: 50%;
+}
+
+.contract {
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.tech {
+    width: 100%;
+    height: 33.3333%;
+    opacity: 50%;
+}
+
+.garnisson {
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.div_epees {
+    width: 9.0909%;
+    height: 100%;
+    opacity: 50%;
+}
+
+.combat {
+    width: 10%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.influence {
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.choam {
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.case_row:hover {
+    background-color: green;
+}
+
+.intrigue_row:hover {
+    background-color: green;
+}
+
+.victory_point:hover {
+    background-color: green;
+}
+
+.contract:hover {
+    background-color: green;
+}
+
+.tech:hover {
+    background-color: green;
+}
+
+.ressources:hover {
+    background-color: green;
+}
+
+.garnisson:hover {
+    background-color: green;
+}
+
+.div_epees:hover {
+    background-color: green;
+}
+
+.combat:hover {
+    background-color: green;
+}
+
+.case_col_influ:hover {
+    background-color: green;
+}
+
+.influence:hover {
+    background-color: green;
+}
+
+.choam:hover {
+    background-color: green;
+}
+
+.landsrand:hover {
+    background-color: green;
+}
+
+.conseil:hover {
+    background-color: green;
+}
+
+.pion:hover {
+    background-color: green;
+}
+
+.epice_box:hover {
+    background-color: green;
+}
+
+.epice_bonus_box:hover {
+    background-color: green;
+}
+
+.box_eau:hover {
+    background-color: green;
+}
+
+.box_marqueur:hover {
+    background-color: green;
 }
