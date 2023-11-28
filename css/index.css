@@ -4,7 +4,7 @@ body {
 }
 
 .wrapper {
-    background: orange;
+    background: cornflowerblue;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -15,7 +15,7 @@ body {
 #titre_boutons {
     width: 600px;
     height: 600px;
-    background: crimson;
+    background: greenyellow;
     display: flex;
     flex-direction: column;
 }
@@ -23,7 +23,7 @@ body {
 .sous_div_titre_boutons {
     width: 100%;
     height: 25%;
-    background: darkgrey;
+    background: greenyellow;
 
 }
 
