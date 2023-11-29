@@ -286,6 +286,17 @@ body {
     opacity: 50%;
 }
 
+.grille_combat_box {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 16.2%;
+    height: 15.25%;
+    top: 76.2%;
+    left: 37%;
+    flex-wrap: wrap;
+}
+
 .landsrand {
     display: flex;
     position: absolute;
@@ -520,6 +531,12 @@ body {
     opacity: 50%;
 }
 
+.combat_box {
+    width: 50%;
+    height: 50%;
+    opacity: 50%;
+}
+
 .case_row:hover {
     background-color: green;
 }
@@ -593,5 +610,9 @@ body {
 }
 
 .box_marqueur:hover {
+    background-color: green;
+}
+
+.combat_box:hover {
     background-color: green;
 }
