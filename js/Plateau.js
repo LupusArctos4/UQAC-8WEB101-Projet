@@ -39,7 +39,7 @@ function choam1Function(joueur) {
 }
 
 function choam2Function(joueur) {
-    joueur.Defausse += espacePlisse;
+    joueur.Defausse.push(espacePlisse);
     joueur.Main.push(joueur.Deck.shift());
 }
 
@@ -96,6 +96,22 @@ function verificationInfluence(joueur, alliance) {
     if (joueur.PointsDAlliance(alliance) >= 2) {
         joueur.PointsDeVictoire +=1;
     }
+    if (joueur.PointsDAlliance(alliance) === 4) {
+        switch (alliance) {
+            case "BeneGesserit":
+                joueur.CartesIntrigues.push(deckIntrigue.shift());
+                break;
+            case "TheEmperor":
+                joueur.Garnison +=2;
+                break;
+            case "SpacingGuild":
+                joueur.Money +=3;
+                break;
+            case "Fremen":
+                joueur.H2O +=1;
+                break;
+        }
+    }
 }
 function beneGesserit_1(joueur) {
     joueur.BeneGesserit +=1;
@@ -106,5 +122,41 @@ function beneGesserit_1(joueur) {
 function beneGesserit_2(joueur) {
     joueur.BeneGesserit +=1;
     verificationInfluence(joueur, "BeneGesserit");
-    joueur.CartesIntrigues.push(joueur.Deck.shift());
+    joueur.CartesIntrigues.push(deckIntrigue.shift());
+    joueur.Garnison +=2;
+}
+function theEmperor_1(joueur) {
+    joueur.TheEmperor +=1;
+    verificationInfluence(joueur,"TheEmperor");
+    joueur.Garnison +=4;
+    joueur.CartesIntrigues.push(deckIntrigue.shift());
+    joueur.Epices -=4;
+}
+function theEmperor_2(joueur) {
+    joueur.TheEmperor +=1;
+    verificationInfluence(joueur,"TheEmperor");
+    joueur.Defausse.push(espacePlisse);
+}
+function spacingGuild(joueur) {
+    joueur.SpacingGuild +=1;
+    verificationInfluence(joueur,"SpacingGuild");
+    joueur.Garnison +=5;
+    joueur.Epices -=5;
+}
+function spacingGuild(joueur) {
+    joueur.SpacingGuild +=1;
+    verificationInfluence(joueur,"SpacingGuild");
+    joueur.H2O +=1;
+}
+function fremen_1(joueur) {
+    joueur.Fremen +=1;
+    verificationInfluence(joueur, "Fremen");
+    joueur.Garnison +=1;
+    // pour défausser c'est compliqué pour l'instant
+    joueur.H2O -=1;
+}
+function fremen_2(joueur) {
+    joueur.Fremen +=1;
+    verificationInfluence(joueur, "Fremen");
+    joueur.Main.push(joueur.Deck.shift());
 }
