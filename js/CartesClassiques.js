@@ -260,3 +260,26 @@ const reconnaissance = new CartesClassiques("Reconnaissance",{
 const  deckStarter= [
     duneSables, duneSables, dague, dague, argument, argument, diplomatie, chevaliere, rechercheAllies, rechercheAllies
 ];
+
+// -----------------
+
+const jessica = new CartesClassiques("JessicaOfArrakis",{
+    BeneGesserit: 0,
+    TheEmperor: 0,
+    SpacingGuild: 0,
+    Fremen: 0,
+    Landsraad: 0,
+    Epices: 1,
+    Eau: 0,
+}, {
+    UpInfluence: 0,
+    UpPtsVictoire: 0
+}, {
+    Piocher: 2,
+    Detruire: 0
+}, {
+    Combat: 2,
+    Epice: 0,
+    Eau: 0,
+    Persuasion: 1
+}, 3, "img/CartesClassiques/Jessica.png");
