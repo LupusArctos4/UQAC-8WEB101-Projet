@@ -252,6 +252,8 @@ const reconnaissance = new CartesClassiques("Reconnaissance",{
     Persuasion: 1
 }, 0);
 
+// -----------------
+
 const  deckStarter= [
     duneSables, duneSables, dague, dague, argument, argument, diplomatie, chevaliere, rechercheAllies, rechercheAllies
 ];
