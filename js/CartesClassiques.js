@@ -27,13 +27,14 @@ Revelation={
  */
 
 class CartesClassiques {
-    constructor(nomCarte, jeu, bonusAchat, effet, revelation, prix) {
+    constructor(nomCarte, jeu, bonusAchat, effet, revelation, prix, lienImage) {
         this.NomCarte = nomCarte;
         this.Jeu = jeu;
         this.BonusAchat = bonusAchat;
         this.Effet = effet;
         this.Revelation = revelation;
         this.Prix = prix
+        this.lienImage = lienImage;
     }
 }
 
@@ -69,7 +70,7 @@ const espacePlisse = new CartesClassiques("EspacePlisse",{
     Epice: 0,
     Eau: 0,
     Persuasion: 0
-}, 0);
+}, 0, "img/CartesClassiques/Imperium.png");
 const epiceDoitCouler = new CartesClassiques("EpiceDoitCouler",{
     BeneGesserit: 0,
     TheEmperor: 0,
@@ -89,7 +90,7 @@ const epiceDoitCouler = new CartesClassiques("EpiceDoitCouler",{
     Epice: 1,
     Eau: 0,
     Persuasion: 0
-}, 9);
+}, 9, "img/CartesClassiques/EpiceDoitCouler.png");
 const contactArrakis = new CartesClassiques("ContactArrakis",{
     BeneGesserit: 0,
     TheEmperor: 0,
@@ -109,7 +110,7 @@ const contactArrakis = new CartesClassiques("ContactArrakis",{
     Epice: 0,
     Eau: 0,
     Persuasion: 2
-}, 2);
+}, 2, "img/CartesClassiques/ContactArrakis.png");
 
 // -----------------
 // Deck
@@ -132,7 +133,7 @@ const dague = new CartesClassiques("Dague",{
     Epice: 0,
     Eau: 0,
     Persuasion: 0
-}, 0);
+}, 0, "img/CartesClassiques/Dague.png");
 const duneSables = new CartesClassiques("duneSables",{
     BeneGesserit: 0,
     TheEmperor: 0,
@@ -152,7 +153,7 @@ const duneSables = new CartesClassiques("duneSables",{
     Epice: 0,
     Eau: 0,
     Persuasion: 1
-}, 0);
+}, 0, "img/CartesClassiques/DuneSable.png");
 const argument = new CartesClassiques("Argument",{
     BeneGesserit: 0,
     TheEmperor: 0,
@@ -172,7 +173,7 @@ const argument = new CartesClassiques("Argument",{
     Epice: 0,
     Eau: 0,
     Persuasion: 2
-}, 0);
+}, 0, "img/CartesClassiques/Argument.png");
 const diplomatie = new CartesClassiques("Diplomatie",{
     BeneGesserit: 1,
     TheEmperor: 1,
@@ -192,7 +193,7 @@ const diplomatie = new CartesClassiques("Diplomatie",{
     Epice: 0,
     Eau: 0,
     Persuasion: 1
-}, 0);
+}, 0, "img/CartesClassiques/Diplomatie.png");
 const chevaliere = new CartesClassiques("Chevaliere",{
     BeneGesserit: 0,
     TheEmperor: 0,
@@ -212,7 +213,7 @@ const chevaliere = new CartesClassiques("Chevaliere",{
     Epice: 0,
     Eau: 0,
     Persuasion: 1
-}, 0);
+}, 0, "img/CartesClassiques/Chevaliere.png");
 const rechercheAllies = new CartesClassiques("RechercheAllies",{
     BeneGesserit: 1,
     TheEmperor: 1,
@@ -232,7 +233,7 @@ const rechercheAllies = new CartesClassiques("RechercheAllies",{
     Epice: 0,
     Eau: 0,
     Persuasion: 0
-}, 0);
+}, 0, "img/CartesClassiques/RechercheAllies.png");
 const reconnaissance = new CartesClassiques("Reconnaissance",{
     BeneGesserit: 0,
     TheEmperor: 0,
@@ -252,7 +253,7 @@ const reconnaissance = new CartesClassiques("Reconnaissance",{
     Epice: 0,
     Eau: 0,
     Persuasion: 1
-}, 0);
+}, 0, "img/CartesClassiques/Reconnaissance.png");
 
 // -----------------
 

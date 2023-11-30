@@ -59,4 +59,5 @@ function MelangerDeckIntrigue()
 {
     deckIntrigue = shuffleArray(deckIntrigue);
     setTimeout('window.document.getElementById("gif_melange").remove()', 6000);
+    setTimeout('afficherCartes("Vert")', 6000);
 }
