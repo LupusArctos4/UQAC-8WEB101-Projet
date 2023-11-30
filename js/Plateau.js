@@ -39,9 +39,11 @@ function choam1Function(joueur) {
 }
 
 function choam2Function(joueur) {
-    joueur.Defausse = espacePlisse;
+    joueur.Defausse += espacePlisse;
     joueur.Main.push(joueur.Deck.shift());
 }
+
+// -----------------
 
 function epice1Function(joueur) {
     joueur.Epices += 4 + cases["epiceBonus_1"];
@@ -54,6 +56,8 @@ function epice2Function(joueur) {
 function epice3Function(joueur) {
     joueur.Epices += 1 + cases["epiceBonus_1"];
 }
+
+// -----------------
 
 function eau1Function(joueur) {
     joueur.Garnison +=1;
@@ -76,4 +80,20 @@ function eau3Function(joueur) {
 function eau4Function(joueur) {
     joueur.Garnison +=1;
     joueur.Main.push(joueur.Deck.shift());
+}
+
+// -----------------
+
+function garnisonToGuerre(joueur) {
+    joueur.Deployees +=1;
+    joueur.PointsDeCombat +=2;
+    joueur.Garnison -=1;
+}
+
+// -----------------
+
+function verificationInfluence(joueur, alliance) {
+    if (joueur.PointsDAlliance(alliance) >= 2) {
+        joueur.PointsDeVictoire +=1;
+    }
 }

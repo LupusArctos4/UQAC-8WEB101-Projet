@@ -1,7 +1,7 @@
 
 class Joueurs {
-    constructor() {
-        this.Nom= null;
+    constructor(nomJoueur) {
+        this.Nom= nomJoueur;
         this.PointsDeVictoire= 0;
         this.PointsDAlliance= {
             BeneGesserit: 0,
@@ -21,7 +21,7 @@ class Joueurs {
             PointsDeCombat: 0
         };
         this.CartesClassiques= {
-            Deck: [],
+            Deck: deckStarter,
             Defausse: [],
             Main: [],
             Joue: []

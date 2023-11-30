@@ -109,7 +109,7 @@ const contactArrakis = new CartesClassiques("ContactArrakis",{
     Persuasion: 2
 }, 2);
 
-// -----------------------------------
+// -----------------
 // Deck
 const dague = new CartesClassiques("Dague",{
     BeneGesserit: 0,
