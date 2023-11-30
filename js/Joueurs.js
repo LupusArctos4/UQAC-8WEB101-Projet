@@ -26,10 +26,6 @@ class Joueurs {
             Main: [],
             Joue: []
         };
-        this.CartesIntrigues= {
-            Complot: [],
-            Combat: [],
-            Endgame: []
-        };
+        this.CartesIntrigues= []
     }
 }

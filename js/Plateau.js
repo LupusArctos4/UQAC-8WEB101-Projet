@@ -97,3 +97,14 @@ function verificationInfluence(joueur, alliance) {
         joueur.PointsDeVictoire +=1;
     }
 }
+function beneGesserit_1(joueur) {
+    joueur.BeneGesserit +=1;
+    verificationInfluence(joueur, "BeneGesserit");
+    joueur.Main.push(joueur.Deck.shift());
+    joueur.Epices -= 1;
+}
+function beneGesserit_2(joueur) {
+    joueur.BeneGesserit +=1;
+    verificationInfluence(joueur, "BeneGesserit");
+    joueur.CartesIntrigues.push(joueur.Deck.shift());
+}
