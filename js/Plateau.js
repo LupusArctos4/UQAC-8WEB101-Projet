@@ -39,7 +39,7 @@ function choam1Function(joueur) {
 }
 
 function choam2Function(joueur) {
-    joueur.Defausse = "EspacePlisse";
+    joueur.Defausse = espacePlisse;
     joueur.Main.push(joueur.Deck.shift());
 }
 
