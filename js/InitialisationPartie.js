@@ -58,4 +58,5 @@ function InitialiserJoueurs(nbJoueurs)
 function MelangerDeckIntrigue()
 {
     deckIntrigue = shuffleArray(deckIntrigue);
+    setTimeout('window.document.getElementById("gif_melange").remove()', 6000);
 }
