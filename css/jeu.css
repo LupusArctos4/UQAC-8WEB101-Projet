@@ -41,23 +41,26 @@ body {
     width: 100%;
     height: 50%;
     display: flex;
+    overflow-y: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
 }
 
 #conteneur_J1 {
-    background-color: red;
-}
-
-#conteneur_J2 {
-    background-color: yellow;
-}
-
-#conteneur_J3 {
     background-color: green;
 }
 
-#conteneur_J4 {
+#conteneur_J2 {
+    background-color: red;
+}
+
+#conteneur_J3 {
     background-color: blue;
+}
+
+#conteneur_J4 {
+    background-color: yellow;
 }
 
 /*Redimenssionné V*/
