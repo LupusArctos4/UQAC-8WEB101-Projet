@@ -103,6 +103,6 @@ const intrigueCombat1 = new CartesIntrigues("Ambush", {
 
 // -----------------
 
-const  deckIntrigue = [
+var  deckIntrigue = [
     intriguePlot1, intriguePlot2, intriguePlot3, intriguePlot4, intriguePlot5, intriguePlot6, intrigueCombat1, intrigueCombat1
 ];

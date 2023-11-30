@@ -1,5 +1,13 @@
 
 class Joueurs {
+    Nom;
+    PointsDeVictoire;
+    PointsDAlliance;
+    Ressources;
+    Combats;
+    CartesClassiques;
+    CartesIntrigues;
+
     constructor(nomJoueur) {
         this.Nom= nomJoueur;
         this.PointsDeVictoire= 0;
