@@ -537,6 +537,14 @@ body {
     opacity: 50%;
 }
 
+#gif_melange {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+}
+
 .case_row:hover {
     background-color: green;
 }
