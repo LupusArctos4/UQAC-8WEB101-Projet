@@ -18,7 +18,7 @@ body {
     width: 50%;
     position: relative;
     height: auto;
-    background-color: orange;
+    background-color: kh;
     margin: 0;
 }
 
@@ -45,15 +45,15 @@ body {
 }
 
 #conteneur_J1 {
-    background-color: red;
+    background-color: deepskyblue;
 }
 
 #conteneur_J2 {
-    background-color: yellow;
+    background-color: antiquewhite;
 }
 
 #conteneur_J3 {
-    background-color: green;
+    background-color: greenyellow;
 }
 
 #conteneur_J4 {
