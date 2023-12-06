@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
