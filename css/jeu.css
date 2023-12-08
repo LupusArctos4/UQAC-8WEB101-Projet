@@ -41,23 +41,26 @@ body {
     width: 100%;
     height: 50%;
     display: flex;
+    overflow-y: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
 }
 
 #conteneur_J1 {
-    background-color: deepskyblue;
+    background-color: green;
 }
 
 #conteneur_J2 {
-    background-color: antiquewhite;
+    background-color: red;
 }
 
 #conteneur_J3 {
-    background-color: greenyellow;
+    background-color: blue;
 }
 
 #conteneur_J4 {
-    background-color: blue;
+    background-color: yellow;
 }
 
 /*Redimenssionné V*/
@@ -284,6 +287,17 @@ body {
     top: 39.63%;
     left: 56%;
     opacity: 50%;
+}
+
+.grille_combat_box {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 16.2%;
+    height: 15.25%;
+    top: 76.2%;
+    left: 37%;
+    flex-wrap: wrap;
 }
 
 .landsrand {
@@ -520,6 +534,20 @@ body {
     opacity: 50%;
 }
 
+.combat_box {
+    width: 50%;
+    height: 50%;
+    opacity: 50%;
+}
+
+#gif_melange {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+}
+
 .case_row:hover {
     background-color: green;
 }
@@ -593,5 +621,9 @@ body {
 }
 
 .box_marqueur:hover {
+    background-color: green;
+}
+
+.combat_box:hover {
     background-color: green;
 }
